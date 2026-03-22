@@ -1,0 +1,14 @@
+name: user-service
+
+services:
+  postgresDB:
+    image: postgres:16
+    container_name: user-svc-db
+    ports:
+      - "5431:5432"
+    environment:
+      POSTGRES_DB: user
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    volumes:
+        - ./postgres_data:/var/lib/postgresql/data
