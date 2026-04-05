@@ -9,6 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
+import java.util.UUID;
 
 @Service
 @Slf4j
@@ -25,7 +26,7 @@ public class UserService {
         if (userProfile.isEmpty()){
             User createUser = User.builder()
                     .id(userDto.userId())
-                    .userName(userDto.username())
+                    .username(userDto.username())
                     .firstName(userDto.firstName())
                     .lastName(userDto.lastName())
                     .email(userDto.email())
@@ -34,6 +35,21 @@ public class UserService {
             log.info("user profile created for userId: {}", userDto.userId());
         }else{
             log.info("user profile already exists for userId: {}", userDto.userId());
+        }
+    }
+
+    public void followRequest(String followerUsername, String followedUsername) {
+
+        Optional<UUID> followerId = userRepository.findIdByUsername(followerUsername);
+        Optional<UUID> followedId = userRepository.findIdByUsername(followedUsername);
+
+        if(followedId.isPresent() && followerId.isPresent()) {
+            log.info("follower and followed ID are present {}, {}", followerId.get(), followedId.get());
+            userRepository.followRequest(followerId.get(), followedId.get());
+            log.info("User: {} has followed user {}", followerId.get(), followedId.get());
+        }
+        else{
+            log.info("follower or followed ID is not present");
         }
     }
 }

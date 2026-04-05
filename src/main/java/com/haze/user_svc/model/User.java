@@ -1,14 +1,11 @@
 package com.haze.user_svc.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.*;
+import lombok.*;
 import org.jspecify.annotations.Nullable;
 import org.springframework.data.domain.Persistable;
 
+import java.util.Set;
 import java.util.UUID;
 
 @Entity
@@ -16,13 +13,28 @@ import java.util.UUID;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
+@EqualsAndHashCode
 public class User implements Persistable<UUID> {
     @Id
     private UUID id;
     private String firstName;
     private String lastName;
-    private String userName;
+    @Column(unique = true)
+    private String username;
     private String email;
+    private String profilePictureUrl;
+
+    @ManyToMany
+    @JoinTable(
+            name = "user_connections",
+            joinColumns = @JoinColumn(name = "follower_id"),
+            inverseJoinColumns = @JoinColumn(name = "followed_id")
+    )
+    private Set<User> following;
+
+    @ManyToMany(mappedBy = "following")
+    private Set<User> followers;
 
     @Override
     public @Nullable UUID getId() {
