@@ -1,8 +1,15 @@
+server:
+  port: 8082
 spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/haze-org
   application:
     name: user-svc
   datasource:
-    url: jdbc:postgresql://localhost:5431/user
+    url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
     password: password
     driver-class-name: org.postgresql.Driver
@@ -21,5 +28,3 @@ spring:
           max-interval: 10s
           multiplier: 2.0
         default-requeue-rejected: false
-server:
-  port: 8082

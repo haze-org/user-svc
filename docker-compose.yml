@@ -1,11 +1,11 @@
-name: user-service
+name: haze-user-svc
 
 services:
   postgresDB:
     image: postgres:16
     container_name: user-svc-db
     ports:
-      - "5431:5432"
+      - "5432:5432"
     environment:
       POSTGRES_DB: user
       POSTGRES_USER: postgres
