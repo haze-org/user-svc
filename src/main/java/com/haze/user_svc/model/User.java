@@ -13,6 +13,7 @@ import java.util.UUID;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
 @ToString
 @EqualsAndHashCode
 public class User implements Persistable<UUID> {

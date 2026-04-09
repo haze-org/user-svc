@@ -23,4 +23,6 @@ public interface UserRepository extends JpaRepository<User, UUID> {
             "values (:followerId, :followedId)" +
             "on conflict do nothing", nativeQuery = true)
     void followRequest(@Param("followerId")UUID followerId, @Param("followedId") UUID followedId);
+
+    Optional<User> findByUsername(String username);
 }
