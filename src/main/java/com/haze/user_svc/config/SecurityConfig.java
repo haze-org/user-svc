@@ -17,6 +17,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authorize -> authorize
                         // this request is protected
                         .requestMatchers("/follow/**").authenticated()
+                        .requestMatchers("/profile/**").authenticated()
                         // any other request is permitted
                         .anyRequest().permitAll())
                 /*
