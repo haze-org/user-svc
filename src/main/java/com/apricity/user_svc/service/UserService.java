@@ -1,8 +1,8 @@
-package com.haze.user_svc.service;
+package com.apricity.user_svc.service;
 
-import com.haze.user_svc.dto.UserDto;
-import com.haze.user_svc.model.User;
-import com.haze.user_svc.repository.UserRepository;
+import com.apricity.user_svc.dto.UserDto;
+import com.apricity.user_svc.model.User;
+import com.apricity.user_svc.repository.UserRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

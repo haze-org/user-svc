@@ -1,4 +1,4 @@
-package com.haze.user_svc.model;
+package com.apricity.user_svc.model;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -11,11 +11,8 @@ import java.util.UUID;
 @Entity
 @Table(name = "profile")
 @Builder
-@NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @ToString
-@EqualsAndHashCode
 public class User implements Persistable<UUID> {
     @Id
     private UUID id;

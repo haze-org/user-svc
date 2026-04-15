@@ -1,4 +1,4 @@
-package com.haze.user_svc;
+package com.apricity.user_svc;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

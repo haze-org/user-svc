@@ -1,7 +1,7 @@
-package com.haze.user_svc.controller;
+package com.apricity.user_svc.controller;
 
-import com.haze.user_svc.dto.UserDto;
-import com.haze.user_svc.service.UserService;
+import com.apricity.user_svc.dto.UserDto;
+import com.apricity.user_svc.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.jwt.Jwt;

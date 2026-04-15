@@ -1,4 +1,4 @@
-name: haze-user-svc
+name: apricity-user-svc
 
 services:
   postgresDB:
