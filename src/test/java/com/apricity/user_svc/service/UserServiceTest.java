@@ -1,8 +1,8 @@
-package com.haze.user_svc.service;
+package com.apricity.user_svc.service;
 
 
-import com.haze.user_svc.model.User;
-import com.haze.user_svc.repository.UserRepository;
+import com.apricity.user_svc.model.User;
+import com.apricity.user_svc.repository.UserRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

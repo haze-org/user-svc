@@ -1,4 +1,4 @@
-package com.haze.user_svc.config;
+package com.apricity.user_svc.config;
 
 import org.springframework.amqp.core.*;
 import org.springframework.amqp.support.converter.JacksonJsonMessageConverter;

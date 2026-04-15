@@ -1,6 +1,6 @@
-package com.haze.user_svc.repository;
+package com.apricity.user_svc.repository;
 
-import com.haze.user_svc.model.User;
+import com.apricity.user_svc.model.User;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;

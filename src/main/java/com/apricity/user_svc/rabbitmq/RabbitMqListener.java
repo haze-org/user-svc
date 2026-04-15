@@ -1,7 +1,7 @@
-package com.haze.user_svc;
+package com.apricity.user_svc.rabbitmq;
 
-import com.haze.user_svc.dto.UserDto;
-import com.haze.user_svc.service.UserService;
+import com.apricity.user_svc.dto.UserDto;
+import com.apricity.user_svc.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;

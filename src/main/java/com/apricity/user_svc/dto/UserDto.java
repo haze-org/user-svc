@@ -1,4 +1,4 @@
-package com.haze.user_svc.dto;
+package com.apricity.user_svc.dto;
 
 import lombok.Builder;
 

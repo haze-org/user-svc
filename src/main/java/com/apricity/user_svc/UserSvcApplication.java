@@ -1,4 +1,4 @@
-package com.haze.user_svc;
+package com.apricity.user_svc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
